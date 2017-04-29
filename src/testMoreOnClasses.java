@@ -6,6 +6,18 @@ public class testMoreOnClasses {
         Rectangle tmp1 = new Rectangle(2, 3, 4, 5);
         System.out.println(tmp1.getValueX() + " " + tmp1.getValueY() + " " + tmp1.getValueWidth() + " " + tmp1.getValueHeight());
 
+
+        a tmp2 = new a();
+        b tmp3 = new b();
+
+
+        /*
+        modifier    class   package subclass    wordl
+        public      Y       Y       Y           Y
+        protected   Y       Y       Y           N
+        no modifier Y       Y       N           N
+        private     Y       N       N           N
+         */
     }
 }
 
@@ -41,3 +53,18 @@ class Rectangle{
         return height;
     }
 }
+
+class a{
+    protected int val;
+    protected String a;
+    public static int val22;
+
+}
+
+class b extends a{
+    int val2;
+    String b;
+}
+
+// check it:
+// https://www.youtube.com/watch?v=j_7oRiVPKik
