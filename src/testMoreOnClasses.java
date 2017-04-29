@@ -18,6 +18,13 @@ public class testMoreOnClasses {
         no modifier Y       Y       N           N
         private     Y       N       N           N
          */
+
+        Klasa temp1 = new Klasa();
+        Klasa temp2 = new Klasa();
+        Klasa temp3 = new Klasa();
+        Klasa temp4 = new Klasa();
+
+        System.out.println("licznik po wywolaniach " + temp3.getLicznik());
     }
 }
 
@@ -66,5 +73,15 @@ class b extends a{
     String b;
 }
 
+class Klasa{
+    public static int licznik = 0;              // wszystkie utworzone obiekty pracują na jednej zmiennej
+
+    Klasa(){
+        ++licznik;
+    }
+    public int getLicznik(){
+        return licznik;
+    }
+}
 // check it:
 // https://www.youtube.com/watch?v=j_7oRiVPKik
